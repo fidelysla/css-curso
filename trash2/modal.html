@@ -1,0 +1,102 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+
+<style>
+
+:root {
+    --buttom-width: 100px;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: forestgreen;
+}
+
+.box {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: thin solid black; */
+}
+
+input[type="button"] {
+    width: 100px;
+    height: auto;
+    padding: .4rem;
+    border: thin solid rgb(21, 84, 193);
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    font-weight: 700;
+}
+
+.popover {
+    min-width: 300px;
+    max-width: 500px;
+    height: 250px;
+    border: medium solid rgb(51, 210, 83);
+    background-color: rgb(201, 211, 221);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    /* margin: 0 auto; */
+    text-align: center;
+}
+
+section p {
+    font-size: .9rem;
+    width: 90%;
+    margin: .5rem auto;
+    text-align: justify;
+}
+
+.close-modal {
+    margin-top: 1rem;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="box">
+        <input class="open-modal" type="button" popovertarget="modal" value="Modal Box"></input>
+        <div class="popover" id="modal" popover>
+            <section>
+                <h2>Modal Box</h2>
+                <p>This is ipsum a modal box. Lorem ipsum dolor sit amet consectetur adipisicing elita. Architecto quasi suscipit, qui voluptates earum accusamus ha ipsum excepturi earum rem reprehenderit expedita totam similiique aut? Doloremque nobis optio neque porro magnami.</p>
+                <!-- <div class="input-div" style="border: thin solid black;">
+                </div> -->
+                <input class="close-modal" type="button" popovertarget="modal" value="Close"></input>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

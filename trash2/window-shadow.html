@@ -1,0 +1,79 @@
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-slider {
+    background-color: rgb(210, 210, 210);
+    /* width: 60vw; */
+    /* max-width: 900px;
+    min-width: 500px;
+    max-height: 500px;
+    min-height: 250px; */
+    /* height: 60vh; */
+    width: 70vw;
+    height: 60vh;
+    background-size: 100% 100%;
+    box-shadow: 20px 20px 10px black;
+    background-repeat: no-repeat;
+    animation: slider 10s linear infinite;
+}
+
+@keyframes slider {
+    0% {
+        background-image: url("../assets/cielo.png");
+    }
+
+    25% {
+        background-image: url("../assets/puesta-sol.jpg")
+    }
+
+    50% {
+        background-image: url("../assets/aves.png")
+    }
+
+    75% {
+        background-image: url("../assets/HSL-wheel.jpg")
+    }
+    
+    100% {
+        background-image: url("../assets/arbol.png")
+    }
+}
+
+/* @media (max-width: 750px) {
+    .image-slider {
+        width: 80vw;
+        height: 20vh;
+    }
+} */
+
+@media (max-width: 1300px) {
+    .image-slider {
+        width: 80vw;
+        height: 20vh;
+    }
+}
+
+</style>
+
+</head>
+<body>
+    <div class="image-slider"></div>
+</body>
+</html>

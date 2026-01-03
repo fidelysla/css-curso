@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax con img</title>
+    <style>
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 200vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+        }
+
+        .parallax-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+        .parallax-container img {
+            position: absolute;
+            width: 100%;
+            height: 120%;
+            object-fit: cover;
+            top: -700px;
+            transform: translateY(0);
+            transition: tranform 0.1s linear;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parallax-container">
+        <img src="../assets/aves.png" alt="Parallax Image">
+    </div>
+
+    <script>
+        const d = document,
+            w = window;
+
+        d.addEventListener("scroll", function () {
+            const img = d.querySelector(".parallax-container img");
+            const scrollTop = w.scrollY;
+
+            img.style.transform = `translateY(${scrollTop * 0.8}px)`;
+        })
+
+    </script>
+</body>
+</html>

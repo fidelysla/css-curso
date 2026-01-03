@@ -1,0 +1,103 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container > * {
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.header {
+    grid-area: header;
+    background-color: yellow;
+}
+
+.banner {
+    grid-area: banner;
+    background-color: red;
+}
+
+.main {
+    grid-area: main;
+    background-color: blue;
+}
+
+.left-aside {
+    grid-area: left-aside;
+    background-color: green;
+}
+
+.right-aside {
+    grid-area: right-aside;
+    background-color: orange;
+}
+
+.low-content {
+    grid-area: low-content;
+    background-color: green;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: blue;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 80px auto 1fr auto 50px;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100vh;
+    grid-template-areas: 
+    "header      header       header"
+    "left-aside  banner       right-aside"
+    "left-aside  main         right-aside"
+    "left-aside  low-content  right-aside"
+    "footer      footer       footer";
+    grid-gap: 7px;
+}
+
+@media (max-width: 681px) {
+
+    .container {
+        grid-template-rows: 50px 50px 50px 1fr 50px 50px 50px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "banner"
+        "left-aside"
+        "main"  
+        "right-aside"
+        "low-content"
+        "footer";
+    }
+
+}
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="banner">banner</div>
+        <div class="left-aside">left-aside</div>
+        <div class="main">main content</div>
+        <div class="right-aside">right-aside</div>
+        <div class="low-content">low-content</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

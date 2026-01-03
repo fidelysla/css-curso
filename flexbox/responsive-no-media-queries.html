@@ -1,0 +1,71 @@
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive sin Media Queries con Flexbox</title>
+
+<style>
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.flex-responsive {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-responsive-item {
+    border: thin solid #f60;
+    flex: 1 1 200px;
+    width: 250px;
+    text-align: center;
+}
+
+.flex-responsive-item:nth-child(odd) {
+    background-color: #f60;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<br><br><br><br>
+
+<h2>Responsive sin Media Queries con Flexbox</h2>
+<section class="flex-responsive">
+    <article class="flex-responsive-item">Item Responsivo 1</article>
+    <article class="flex-responsive-item">Item Responsivo 2</article>
+    <article class="flex-responsive-item">Item Responsivo 3</article>
+    <article class="flex-responsive-item">Item Responsivo 4</article>
+    <article class="flex-responsive-item">Item Responsivo 5</article>
+    <article class="flex-responsive-item">Item Responsivo 6</article>
+    <article class="flex-responsive-item">Item Responsivo 7</article>
+    <article class="flex-responsive-item">Item Responsivo 8</article>
+    <article class="flex-responsive-item">Item Responsivo 9</article>
+    <article class="flex-responsive-item">Item Responsivo 10</article>
+    <article class="flex-responsive-item">Item Responsivo 11</article>
+    <article class="flex-responsive-item">Item Responsivo 12</article>
+    <article class="flex-responsive-item">Item Responsivo 13</article>
+    <article class="flex-responsive-item">Item Responsivo 14</article>
+    <article class="flex-responsive-item">Item Responsivo 15</article>
+    <article class="flex-responsive-item">Item Responsivo 16</article>
+    <article class="flex-responsive-item">Item Responsivo 17</article>
+    <article class="flex-responsive-item">Item Responsivo 18</article>
+    <article class="flex-responsive-item">Item Responsivo 19</article>
+</section>
+
+
+</body>
+</html>

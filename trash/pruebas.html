@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\css\normalize-v8-0-1.css">
+    <title>Maquetacion</title>
+    <style>
+        
+        html {
+            box-sizing: border-box;
+            /* width: 100vw;
+            height: 100vh; */
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: inherit;
+        }
+
+        body::-webkit-scrollbar 
+        body::-webkit-scrollbar-thumb {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: rgb(47, 148, 75);
+            height: 60px;
+            padding: 3px;
+            position: sticky;
+            top: 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+        }
+
+        .main {
+            display: inline;
+            height: 100%;
+            margin: 0;
+            position: relative;
+            left: 0;
+            width: 100vw;
+        }
+
+        .aside {
+            display: block;
+            position: fixed;
+            top: 60px;
+            height: 10rem;
+            right: 0;
+            margin: 0;
+            width: 10vw;
+        }
+        
+        aside div {
+            margin: 8px;
+            background-color: rgb(221, 248, 166);
+            padding: .5rem;
+            text-align: right;
+        }
+
+
+
+        main div {
+            /* border: thin solid black; */
+            /* margin: 8px; */
+            /* background-color: #3b3b3b; */
+            /* color: black; */
+            padding: .5rem;
+        }
+
+        .container-main > * {
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
+        }
+
+        .container-main p,
+        .container-main li {
+            font-size: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container-header p {
+            font-weight: bolder;
+            font-size: 30px;
+            color: white;
+            /* background: linear-gradient( 45deg,
+                #f53b3b, rgb(217, 0, 255),
+                rgb(135, 247, 210)
+            );
+            background-clip: text;
+            -webkit-text-fill-color: transparent; */
+            font-family: sans-serif;
+            display: inline-block;
+            margin: 0;
+        }
+
+        .header-title::first-letter {
+            font-size: 45px;
+        }
+
+        .footer {
+            background-color: rgb(48, 48, 167);
+            padding: 3px;
+            position: sticky;
+            bottom: -90px;
+            height: 8rem;
+        }
+
+        .globos > img {
+            display: block;
+            margin: 0 auto;
+            max-width: 250px;
+            filter: drop-shadow(
+                0 0 10px rgba(0,0,0,.8)
+            );
+            transition: height .5s;
+            interpolate-size: allow-keywords;
+        }
+
+        /* img:hover {max-width: 300px;} */
+
+        @keyframes show {
+            from {
+                opacity: 0;
+                scale: 20%;
+            }
+
+            to {
+                opacity: 1;
+                scale: 100%;
+            }
+        }
+
+        .globos img {
+            /* view-timeline-name: --reveal; */
+
+            animation-name: show;
+            animation-fill-mode: both;
+
+            /* animation-timeline: --reveal; */
+            /* animation-range: entry 5% cover 50%; */
+        }
+
+        .over-flow {
+            display: block;
+            /* width: 400px; */
+            height: 100px;
+            background-color: #222;
+            color: white;
+            border-radius: 5%;
+            margin-top: 1rem;
+            min-width: 19rem;
+            max-width: 19rem;
+            /* field-sizing: content; */
+            /* scrollbar-width: blue; */
+        }
+
+
+        .container-fotos {
+            display: grid;
+            margin-top: 30px;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(150px, 1fr)
+            );
+            gap: 30px;
+        }
+        
+        .container-fotos > img {
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            filter: grayscale(1);
+            transition: 
+                scale 300ms ease-out,
+                filter 250ms ease-in-out;
+        }
+
+        .container-fotos > img:hover {
+            scale: 1.15;
+            filter: grayscale(0);
+        }
+
+        .container-text-h1 {
+            border: thin solid black;
+            text-align: center;
+            margin-top: 1rem;
+            background-image: url("extraterrestrial.png");
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            height: 100%;
+        }
+        
+        .container-text-h1 > h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+            font-size: 20vw;
+            margin: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            width: 600px;
+            height: 300px;
+            border-radius: 1rem;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .card1 {
+            /* background-color: #f77c73; */
+            background-image: url("hbhbbs.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+        .card2 {
+            background-color: #6eafe5;
+            background-image: url("pngwingco.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .card3 {
+            background-color: #70f4b4;
+            background-image: url("FtZ1kH7XoAE5WXs.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+        .card4 {
+            background-color: #fffc31;
+            background-image: url("gjrsngursgbs.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card {
+            flex: 1;
+            height: 100%;
+            transition: flex .5s ease;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .card:hover {
+            flex: 3;
+        }
+
+
+        .img-container {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            /* border: thin solid black; */
+            padding: 0;
+            border-radius: 1rem;
+            border: .5rem solid #6246d3;
+        }
+        
+        .img-container > img {
+            width: 100%;
+            height: 100%;
+            filter: grayscale(1);
+            border-radius: .5rem;
+            transition: 
+                scale 650ms ease-out,
+                filter 250ms ease-in-out;
+        }
+
+        .img-container:hover > img {
+            scale: 1.15;
+            filter: grayscale(0);
+        }
+
+    </style>
+
+</head>
+<body>
+<header class="header">
+    <div class="container-header">
+        <p class="header-title">MAIN</p>
+        <p class="header-title">GOAL</p>
+    </div>
+</header>
+
+<div class="container">
+
+<main class="main">
+    <div class="container-main">
+        <h1>Data Science</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, sed incidunt aut natus, aliquid consequatur quis nostrum velit consequuntur amet expedita harum ratione omnis dicta eligendi cumque suscipit iure adipisci.</p>
+        <h2>Machine Learning</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eaque doloribus maxime! Commodi perferendis ipsa non, ex architecto consectetur nesciunt neque totam alias quo eum dolor fuga quae veniam autem.</p>
+        <h2>Deep Learning</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores ipsa earum enim est id labore qui molestiae nam odit praesentium, impedit sequi excepturi suscipit neque cupiditate minima eaque assumenda sunt.</p>
+        <h3>Deep Learning Fundamentals</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam quibusdam libero laudantium dolorem, laborum ducimus adipisci corporis reiciendis sit recusandae neque ipsa maxime fugit eos nihil aut eaque, dolore aliquid.</p>
+        <ol>
+            <li>The deep</li>
+            <li>The Learning</li>
+            <li>The Fundamentals</li>
+        </ol>
+        <h3>Artificial Intelligence</h3>
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit repellendus quisquam repudiandae ad? Impedit dolorum illum repudiandae, aspernatur non, recusandae deserunt at iste dolores voluptatum quod qui. Consectetur, deleniti veritatis.</span><span>Fugiat laborum, iste sint explicabo, in incidunt, deserunt repellendus quia laboriosam nemo rem aut repellat similique illum quibusdam! Accusantium aliquam placeat earum iusto veniam vitae aspernatur? Ipsam quibusdam odit sit.</span><span>Delectus, praesentium fugit eum voluptas perspiciatis aspernatur amet commodi beatae nihil eos enim veritatis? Accusantium omnis sequi illum explicabo distinctio nobis odio, maxime non labore excepturi ratione cum! Eveniet, fugit?</span></p>
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit repellendus quisquam repudiandae ad? Impedit dolorum illum repudiandae, aspernatur non, recusandae deserunt at iste dolores voluptatum quod qui. Consectetur, deleniti veritatis.</span><span>Fugiat laborum, iste sint explicabo, in incidunt, deserunt repellendus quia laboriosam nemo rem aut repellat similique illum quibusdam! Accusantium aliquam placeat earum iusto veniam vitae aspernatur? Ipsam quibusdam odit sit.</span><span>Delectus, praesentium fugit eum voluptas perspiciatis aspernatur amet commodi beatae nihil eos enim veritatis? Accusantium omnis sequi illum explicabo distinctio nobis odio, maxime non labore excepturi ratione cum! Eveniet, fugit?</span></p>
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit repellendus quisquam repudiandae ad? Impedit dolorum illum repudiandae, aspernatur non, recusandae deserunt at iste dolores voluptatum quod qui. Consectetur, deleniti veritatis.</span><span>Fugiat laborum, iste sint explicabo, in incidunt, deserunt repellendus quia laboriosam nemo rem aut repellat similique illum quibusdam! Accusantium aliquam placeat earum iusto veniam vitae aspernatur? Ipsam quibusdam odit sit.</span><span>Delectus, praesentium fugit eum voluptas perspiciatis aspernatur amet commodi beatae nihil eos enim veritatis? Accusantium omnis sequi illum explicabo distinctio nobis odio, maxime non labore excepturi ratione cum! Eveniet, fugit?</span></p>
+        <div class="globos">
+            <img src="pngwingco.png" alt="Hola">
+            <img src="pngwingco.png" alt="Hola">
+            <img src="pngwingco.png" alt="Hola">
+            <img src="pngwingco.png" alt="Hola">
+            <img src="pngwingco.png" alt="Hola">
+        </div>
+
+        <textarea class="over-flow" placeholder="naha">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In perspiciatis placeat, quas ea ex eligendi, aliquid
+            mollitia molestias, repellat a maiores facilis deleniti accusantium! Culpa quidem unde blanditiis saepe obcaecati.
+        </textarea>
+        <div class="container-fotos">
+            <img src="extraterrestrial.png" alt="Hola">
+            <img src="BRJSVRSVJ.jpg" alt="Hola">
+            <img src="ffjkenjfnejknsjkf.png" alt="Hola">
+            <img src="FtZ1kH7XoAE5WXs.jpeg" alt="Hola">
+            <img src="gjrsngursgbs.png" alt="Hola">
+            <img src="image.png" alt="Hola">
+            <img src="jbsngsnem.jpeg" alt="Hola">
+            <img src="jdngrrngr.png" alt="Hola">
+            <img src="jnskgjsgnskjg.png" alt="Hola">
+            <img src="nwagingns.jpeg" alt="Hola">
+            <img src="OIG.4IcWa7.jpg" alt="Hola">
+        </div>
+        <div class="container-text-h1">
+            <h1>ALIEN</h1>
+        </div>
+        <hr>
+        <div class="wrapper">
+            <div class="card card1"></div>
+            <div class="card card2"></div>
+            <div class="card card3"></div>
+            <div class="card card4"></div>
+        </div>
+        <br>
+        <div class="img-container">
+            <img src="FtZ1kH7XoAE5WXs.jpeg" alt="Alien">
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+</main>
+
+<!-- <aside class="aside">
+    <div>
+        <p>lorem ipsum</p>
+        <p>lorem ipsum</p>
+        <p>lorem ipsum</p>
+        <p>lorem ipsum</p>
+        <p>lorem ipsum</p>
+        <p>lorem ipsum</p>
+        <p>lorem ipsum</p>
+        <p>lorem ipsum</p>
+        <p>lorem ipsum</p>
+        <p>lorem ipsum</p>
+        <br><br><br><br>
+    </div>
+</aside> -->
+
+</div>
+
+<footer class="footer">FOOTER</footer>
+
+</body>
+</html>

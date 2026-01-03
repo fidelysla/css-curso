@@ -1,0 +1,475 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiragana</title>
+<style>
+
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+    /* background-color: #2e8b57; */
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+h1 {
+    position: fixed;
+    top: 90vh;
+    right: 0;
+    left: 0;
+    color: black;
+
+    text-align: center;
+    opacity: 30%;
+    visibility: visible;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+}
+
+.slides {
+    width: 100%;
+    height: 100vh;
+
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.slide {
+    width: 100%;
+    height: inherit;
+    background-color: #34935d;
+
+    scroll-snap-align: center;
+}
+
+.slide-container {
+    width: 80%;
+    height: inherit;
+    margin: 0 auto;
+    font-size: 8vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-container h2 {
+    text-align: center;
+    margin: 0 auto;
+    color: #973232;
+    text-shadow: .5rem -.2rem .3rem #222e26;
+}
+
+/** Ajuste del Scroll Efecto Carrusel Horizontal */
+/* FLIP 3D 
+    perspective: ;
+    transform-style: ;
+    transform: rotateY();
+    backface-visibility: ;
+
+*/
+
+.carousel {
+    /* border: medium solid #0d7d0d; */
+    width: 70%;
+    height: 60vh;
+    /* display: flex; */
+
+    /* overflow-x: hidden; */
+}
+
+/* .carousel-container { */
+    /* background-color: antiquewhite; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 100%); */
+
+    /* overflow-x: scroll; */
+    /* overflow-y: hidden; */
+
+    /* scroll-snap-type: x mandatory; */
+/* } */
+
+.flip-card-1 {
+
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+
+    perspective: 10rem;
+
+    transform-style: preserve-3d;
+}
+
+.flip-card-1:hover {
+    transform: rotateY(180deg);
+}
+
+.flip-card-1 h2 {
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+}
+
+
+.flip-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #96ffb9;
+
+    backface-visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-front {
+    transform: rotateY(0deg);
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+}
+
+
+/* .carousel-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    scroll-snap-align: center;
+} */
+</style>
+
+</head>
+<!-- file:///C:/Users/FIDEL/Documents/DocumentosPCDrive/PDFs/kanjibookjlptn5.pdf -->
+<body>
+<main class="slides">
+    <h1>Hiragana</h1>
+<section class="slide">
+    <article class="slide-container">
+        <div class="carousel">
+            <div class="carousel-container flip-card-1">
+
+                <article class="carousel-slide flip-face flip-front">
+                        <h2>く</h2>
+                </article>
+                <article class="carousel-slide flip-face flip-back">
+                        <h2>ku</h2>
+                </article>
+
+            </div>
+        </div>
+    </article>
+</section>
+
+section*5.slide>article.slide-container>section.carousel>.flip-card-1>article.flip-face.flip-front>h2^article.flip-face.flip-back
+
+    <section class="slide">
+        <article class="slide-container">
+            <!-- section.carousel>.carousel-container>article*2.carousel-slide -->
+            <section class="carousel">
+                <div class="carousel-container flip-card-1">
+                    <article class="carousel-slide">
+                        <h2>せ</h2>
+                    </article>
+                    <article class="carousel-slide">
+                        <h2>se</h2>
+                    </article>
+                </div>
+            </section>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <!-- section.carousel>.carousel-container>article*2.carousel-slide>h2{H} -->
+            <section class="carousel">
+                <div class="carousel-container">
+                    <article class="carousel-slide">
+                        <h2>こ</h2>
+                    </article>
+                    <article class="carousel-slide">
+                        <h2>ko</h2>
+                    </article>
+                </div>
+            </section>
+        </article>
+    </section>
+
+    section.slide>article.slide-container>section.carousel>.carousel-container.flip-card-1>article.carousel-slide>h2*2
+    
+    <section class="slide">
+        <article class="slide-container">
+            <h2>え</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>す</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>お</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>う</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>き</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>い</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>し</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>け</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>か</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>あ</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>そ</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>さ</h2>
+        </article>
+    </section>
+    <!-- aks -->
+    <section class="slide">
+        <article class="slide-container">
+            <h2>つ</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>は</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>ひ</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>に</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>な</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>た</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>へ</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>ね</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>ほ</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>ち</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>の</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>ふ</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>ぬ</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>と</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>て</h2>
+        </article>
+    </section>
+    <!-- tnh -->
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+    <section class="slide">
+        <article class="slide-container">
+            <h2>H</h2>
+        </article>
+    </section>
+</main>
+<script>
+
+    // document.addEventListener("click", e => {
+    //     // const container = document.querySelector(".carousel-container");
+        
+    //     // container.classList.add("colore-red")
+
+    //     function nextSlide() {
+    //         const container = document.querySelector(".carousel-container");
+
+    //         container.scrollBy({
+    //             left: window.innerWidth,
+    //             behavior: "smooth"
+    //         })
+    //     }
+
+    //     // if (e.target.matches(container)) { 
+    //     //     nextSlide()
+    //     // }
+    // }
+    // )
+
+    // document.addEventListener("click", function nextSlide(e) {
+    //     const container = document.querySelectorAll(".carousel-container");
+
+    //     container.scrollBy({
+    //         left: window.innerWidth,
+    //         behavior: "smooth"
+    //     })
+    // })
+
+</script>
+</body>
+</html>

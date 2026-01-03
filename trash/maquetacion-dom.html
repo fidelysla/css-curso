@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetacion Dom</title>
+    <style>
+
+        :root {
+            --main-font: sans-serif;
+            --font-size: 16px;
+            --main-color:#f7df16;
+            --second-color: #222;
+            --main-modal-color: rgb(247, 222, 30, 0.85);
+            --second-modal-color: rgb(34, 34, 34, 0.85);
+            --container-width: 1200px;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-family: var(--main-font);
+            font-size: var(--font-size);
+            scroll-behavior: smooth;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* menu */
+        .header {
+            position: sticky;
+            top: 0;
+            padding: 1rem;
+            background-color: var(--main-color);
+            color: var(--second-color);
+        }
+
+        .header h1 {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* seccion */
+        .section {
+            padding: 2rem;
+            padding-top: 4rem;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: var(--container-width);
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .panel {
+            position: fixed;
+            z-index: 998;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--second-modal-color);
+            opacity: 0;
+            /* visibility: hidden; */
+            transition: 
+                transform .7s ease, 
+                opacity 0.5s ease;
+            transform: translate(-100%, 0);
+        }
+
+        .panel.is-active {
+            transform: translate(0, 0);
+            opacity: 1;
+            /* visibility: visible; */
+        }
+
+        .panel-btn {
+            position: fixed;
+            font-size: 40px;
+            bottom: 1vh;
+            right: 1vw;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--main-color);
+            z-index: 999;
+        }
+
+        .panel-btn a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .hamburger-box,
+        .hamburger-inner {
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu {
+            width: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+        }
+
+        .menu a {
+            padding: 2rem;
+            width: inherit;
+            display: block;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: var(--main-color);
+            transition: all 0.3s ease;
+        }
+
+        .menu a:hover {
+            font-weight: bold;
+            color: var(--second-color);
+            background-color: var(--main-modal-color);
+        }
+
+        /* ScrollSpy */
+
+        @media screen and (min-width: 1024px) {
+            body {
+                display: grid;
+                grid-template-columns: 80% 20%;
+                grid-template-rows: 4rem auto;
+                grid-template-areas: 
+                "header header"
+                "main   panel";
+            }
+
+            main {
+                grid-area: main;
+            }
+
+            .header {
+                grid-area: header;
+            }
+
+            .panel {
+                grid-area: panel;
+                position: sticky;
+                align-self: flex-start;
+                top: 4rem;
+                bottom: 0;
+                justify-content: flex-start;
+                background-color: var(--second-color);
+                transform: translate(0,0);
+                opacity: 1;
+                visibility: visible;
+                /* height: calc(100vh - 4rem); */
+
+            }
+
+            .panel-btn {
+                display: none;
+            }
+
+            .menu {
+                justify-content: start;
+                text-align: right;
+            }
+            
+            .menu a {
+                font-size: 1rem;
+                padding: .75rem;
+            }
+
+            .menu a:hover,
+            .menu a.active {
+                color: var(--second-color);
+                background-color: var(--main-color);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Ejercicios DOM</h1>
+    </header>
+
+    <button class="panel-btn hamburger hamburger--vortex" type="button" title="menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner">≡</span>
+            <!-- <a href="#panel" class="hamburger-inner">≡</a> -->
+        </span>
+    </button>
+
+    <aside class="panel">
+        <nav class="menu">
+            <a href="#seccion1" data-scroll-spy>Reloj Digital y Alarman Sonora</a>
+            <a href="#seccion2" data-scroll-spy>Eventos del Teclado</a>
+            <a href="#seccion3" data-scroll-spy>Cuenta Regresiva</a>
+            <a href="#seccion4" data-scroll-spy>Responsive con JavaScript</a>
+            <a href="#seccion5" data-scroll-spy>Responsive Tester</a>
+            <a href="#seccion6" data-scroll-spy>Detección de Dispositivos (User Agent)</a>
+            <a href="#seccion7" data-scroll-spy>Detección de la conexión</a>
+            <a href="#seccion8" data-scroll-spy>Detección de la Cámara Web</a>
+            <a href="#seccion9" data-scroll-spy>Geolocalización</a>
+            <a href="#seccion10" data-scroll-spy>Filtros de Búsquedas</a>
+            <a href="#seccion11" data-scroll-spy>Sorteo Digital</a>
+            <a href="#seccion12" data-scroll-spy>Responsive Slider</a>
+            <a href="#seccion13" data-scroll-spy>Video Inteligente</a>
+            <a href="#seccion14" data-scroll-spy>Validaciones de Formulario</a>
+            <a href="#seccion15" data-scroll-spy>Narrador</a>
+            <a href="">_</a>
+            <a href="">_</a>
+            <a href="">_</a>
+            <a href="">_</a>
+        </nav>
+    </aside>
+
+    <main>
+
+        <section id="seccion1" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+        <section id="seccion2" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+        <section id="seccion3" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+        <section id="seccion4" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+        <section id="seccion5" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+        <section id="seccion6" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+        <section id="seccion7" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+        <section id="seccion8" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+        <section id="seccion9" class="section" data-scroll-spy>
+            <h2>Geolocalización</h2>
+        </section>
+        <section id="seccion10" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+        <section id="seccion11" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+        <section id="seccion12" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+        <section id="seccion13" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+        <section id="seccion14" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+        <section id="seccion15" class="section" data-scroll-spy>
+            <h2>Sección #</h2>
+        </section>
+
+    </main>
+
+    <script>
+        const d = document;
+
+        function hamburgerMenu(panelBtn, panel, menuLink) {
+
+            d.addEventListener("click", e => {
+                if (e.target.matches(panelBtn) || e.target.matches(`${panelBtn} *`)) {
+                    d.querySelector(panel).classList.toggle("is-active")
+                }
+
+                if (e.target.matches(menuLink)) {
+                    d.querySelector(panel).classList.remove("is-active")
+                }
+            })
+        }
+
+        hamburgerMenu(".panel-btn", ".panel", ".menu a");
+        // d.addEventListener("DOMContentLoad", e => {
+        // })
+    </script>
+</body>
+</html>

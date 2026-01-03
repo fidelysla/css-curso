@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html>
+<!-- <html lang="es" class="dark-mode"> -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efectos Visuales en CSS</title>
+    <link rel="stylesheet" href="css/visual-effects.css">
+</head>
+
+<body>
+    <h1>Efectos Visuales en CSS</h1>
+    <hr>
+    <h2>Sombras</h2>
+
+    <div class="box shadows">
+        <p>Sombras</p>
+    </div>
+
+    <div class="box shadows-multiple">
+        <p>Sombras</p>
+    </div>
+
+    <div class="box drop-shadow">
+        <img src="assets/arbol.png" alt="arbol">
+    </div>
+
+    <hr>
+
+    <h2>Degradados</h2>
+
+    <h3>Lineal</h3>
+    <div class="box linear-gradient"></div>
+
+    <h3>Radial</h3>
+    <div class="box radial-gradient"></div>
+    
+    <h3>Cónico</h3>
+    <div class="box conic-gradient"></div>
+
+    <h3>Repetir Degradados</h3>
+    <div class="box repeat-gradient-linear"></div>
+    <div class="box repeat-gradient-radial"></div>
+    <div class="box repeat-gradient-conic"></div>
+
+    <h3>Gráficas con degradados</h3>
+    <div class="box chart-gradient"></div>
+    <div class="box donut-gradient"></div>
+
+    <hr>
+
+    <h2>Filtros</h2>
+
+    <h3>Filtros</h3>
+
+    <article class="card">
+        <img class="filter" src="assets/puesta-sol.jpg" alt="puesta-de-sol">
+    </article>
+    
+    <h3>Filtros Múltiples</h3>
+    <article class="card">
+        <img class="filters-multiple" src="assets/puesta-sol.jpg" alt="puesta-de-sol">
+    </article>
+    
+    <h3>Filtros a fondos (backdrop-filter)</h3>
+    <article class="card relative">
+        <img src="assets/puesta-sol.jpg" alt="puesta-de-sol">
+        <div class="backdrop-filter">
+            <h4>Puesta de Sol</h4>
+        </div>
+    </article>
+
+    <h3>Filtros Múltiples a Fondos</h3>
+    <article class="card relative">
+        <img src="assets/puesta-sol.jpg" alt="puesta-de-sol">
+        <div class="backdrop-filter-multiple">
+            <h4>Puesta de Sol</h4>
+        </div>
+    </article>
+    
+    <hr>
+
+    <h3>Modo Dark/Light con Filtros</h3>
+    <article class="card">
+        <img src="assets/puesta-sol.jpg" alt="puesta-de-sol">
+    </article>
+    <article class="card">
+        <img src="assets/favicon.png" alt="kEnAi">
+    </article>
+    
+    <hr>
+    
+    <h2>Modos de Mezcla</h2>
+    <h3>Sobre Imágenes (img)</h3>
+    <article class="card relative blend-modes">
+        <img src="assets/puesta-sol.jpg" alt="Puesta de Sol">
+        <img class="absolute" src="assets/buenos-dias.jpg" alt="Buenos Dias">
+    </article>
+
+    <h3>Sobre Imágenes de fondo (background-image)</h3>
+    <article class="card bg-blend-modes"></article>
+
+    <hr>
+
+    <h2>Máscaras (clip-path)</h2>
+    <article class="card clip-path">
+        <img src="assets/puesta-sol.jpg" alt="Puesta de Sol">
+    </article>
+
+    <hr>
+    <h2>Formas</h2>
+    <article class="shapes">
+        <h3>Ejemplos de Formas y siluetas entre textos e imágenes</h3>
+        <img src="assets/puesta-sol.jpg" alt="Puesta de Sol" class="float-left shape-1">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae a nemo ducimus! Aliquid ratione architecto iste minima ipsum eius excepturi nam odit, sapiente eum enim unde neque error quaerat et.</p>
+        <p>Atque provident consequuntur nihil, illum perferendis asperiores dolores ab dolorum ipsam sint quisquam amet necessitatibus velit? Nobis optio nihil, blanditiis libero minus eligendi tempora, quasi itaque sit fugit laboriosam molestias.</p>
+        <p>Nobis, consequatur qui. Alias atque velit quod ad! Quo veniam expedita corrupti accusamus cum vitae minus odio, perspiciatis excepturi dolore aliquam doloremque, quas maiores architecto voluptatum libero non aliquid pariatur?</p>
+        <p>Itaque asperiores ab, maiores excepturi dolorem at debitis assumenda nam minus maxime facere animi inventore dolor praesentium sint iure nostrum, quos deleniti minima, voluptatibus veritatis sequi quibusdam commodi? Exercitationem, natus?</p>
+        <img src="assets/puesta-sol.jpg" alt="Puesta de Sol" class="float-right shape-2">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae a nemo ducimus! Aliquid ratione architecto iste minima ipsum eius excepturi nam odit, sapiente eum enim unde neque error quaerat et.</p>
+        <p>Atque provident consequuntur nihil, illum perferendis asperiores dolores ab dolorum ipsam sint quisquam amet necessitatibus velit? Nobis optio nihil, blanditiis libero minus eligendi tempora, quasi itaque sit fugit laboriosam molestias.</p>
+        <p>Nobis, consequatur qui. Alias atque velit quod ad! Quo veniam expedita corrupti accusamus cum vitae minus odio, perspiciatis excepturi dolore aliquam doloremque, quas maiores architecto voluptatum libero non aliquid pariatur?</p>
+        <p>Itaque asperiores ab, maiores excepturi dolorem at debitis assumenda nam minus maxime facere animi inventore dolor praesentium sint iure nostrum, quos deleniti minima, voluptatibus veritatis sequi quibusdam commodi? Exercitationem, natus?</p>
+        <img src="assets/puesta-sol.jpg" alt="Puesta de Sol" class="float-left shape-3">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem in officiis optio magni. Assumenda iste deleniti incidunt, explicabo dolorum, ducimus totam pariatur repellendus alias, magni optio voluptates voluptatum quod. Accusantium.</p>
+        <p>Eius accusantium dolorum voluptate quisquam labore iusto minus temporibus nobis eligendi inventore maxime illum beatae architecto adipisci velit, ullam, assumenda voluptatibus reiciendis numquam, quos quaerat. Quas dolore ratione quibusdam porro?</p>
+        <p>Officiis vero quis ratione architecto maiores possimus blanditiis amet dolorem velit dolor, dolorum, delectus tempora sit repudiandae animi quia mollitia, vel consectetur temporibus illum enim odit? Repellat officia vero autem?</p>
+        <p>Sit cum architecto optio eveniet deserunt! Alias odit perferendis voluptatem reiciendis dolor qui aspernatur atque voluptates esse, deleniti magni neque nesciunt consequuntur ad officiis animi sed et exercitationem aut itaque.</p>
+    </article>
+
+    <a href="index.html#temario-css">⬆️</a>
+    <br><br><br>
+</body>
+
+</html>

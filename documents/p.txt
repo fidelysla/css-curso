@@ -1,0 +1,338 @@
+
+
+
+##############
+FUNDAMENTOS
+{
+    📝 ÍNDICE:
+    1. 0:00:00 - Bienvenida
+    2. 0:06:28 - Introducción a CSS
+    3. 0:13:40 - Sintaxis básica
+    4. 0:18:22 - Comentarios en CSS
+    5. 0:20:12 - Formas de invocación CSS
+    6. 0:34:48 - Versiones, documentación y enlaces de referencia
+    7. 0:47:33 - Selectores básicos: Etiquetas, Identificadores y Clases
+    8. 1:11:49 - Dando orden y estructura a nuestro código HTML y CSS
+    9. 1:17:49 - Selector de hijos directos y descendientes
+    10. 1:25:04 - Selector de hermanos y adyacente
+    11. 1:33:39 - Selectores de atributos
+    12. 2:00:00 - Selector Universal
+    13. 2:06:25 - Pseudoclases de estado
+    14. 2:28:49 - Pseudoclases por posición y tipo
+    15. 2:43:34 - Pseudoelementos
+    16. 3:00:52 - Agrupación de selectores
+    17. 3:08:13 - El Algoritmo de CSS
+    18. 3:13:25 - La Cascada
+    19. 3:29:27 - Especificidad
+    20. 3:46:14 - Practicando cascada y especificidad
+    21. 4:08:52 - Herencia
+    22. 4:25:27 - Reseteo y Normalización de estilos
+    23. 4:35:42 - Prefijos de los navegadores
+    24. 4:48:14 - Modelo de Caja
+    25. 5:06:07 - Width & Height
+    26. 5:08:54 - Border
+    27. 5:20:06 - Margin & Padding
+    28. 5:41:10 - Cajas de Línea VS Cajas de Bloque
+    29. 5:58:08 - Propiedad display
+    30. 6:18:26 - Propiedad visibility
+    31. 6:23:30 - Propiedad overflow
+    32. 6:29:43 - Tamaño de caja
+    33. 6:54:00 - Propiedades float & clear
+    34. 7:14:46 - Colapso de márgenes verticales
+    35. 7:24:21 - Adición de márgenes horizontales
+    36. 7:27:43 - Centrado de Cajas
+    37. 7:38:07 - Posicionamiento CSS
+    38. 7:47:39 - Posicionamiento static
+    39. 7:50:23 - Posicionamiento relative
+    40. 8:02:46 - Posicionamiento absolute 
+    41. 8:17:21 - Posicionamiento fixed
+    42. 8:24:29 - Posicionamiento sticky
+    43. 8:41:07 - Propiedad z-index
+    44. 9:07:02 - Cabecera fixed VS Cabecera sticky
+    45. 9:25:27 - Efecto de slides con position sticky
+    46. 9:35:03 - Ventana Modal / Menú Móvil con posicionamiento fixed
+    47. 9:47:50 - Márgenes negativos
+    48. 9:52:59 - Despedida
+
+
+
+    .contact-form > input[type="submit"] {
+        width: 50%;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .contact-form *::placeholder {
+        color: #222;
+    }
+
+    .contact-form > [required] {
+        background-color: #fbfbfb;
+    }
+
+    .contact-form > [required]:valid {
+        border: thin solid var(--form-ok-color);
+    }
+
+    .contact-form > [required]:invalid {
+        border: thin solid var(--form-orror-color);
+    }
+
+    .contact-form-error {
+        margin-top: -1rem;
+        font-size: 80%;
+        background-color: var(--form-orror-color);
+        color: #fff;
+        transition: all 800ms ease;
+    }
+
+    .contact-form-error.is-active {
+        display: block;
+        animation: show-message 1s 1 normal 0s ease-out both;
+    }
+
+}
+
+####################
+Unidades y Estilos CSS
+{
+    📝 ÍNDICE:
+    1. 0:00:00 - Bienvenida
+    2. 0:06:32 - Colores en CSS
+    3. 0:11:30 - Colores por Nombres
+    4. 0:17:10 - Convertidor de Colores
+    5. 0:18:14 - Sistema Hexadecimal
+    6. 0:34:52 - Sistema RGB
+    7. 0:44:24 - Sistema HSL
+    8. 1:02:04 - ¿Qué sistema de colores uso?
+    9. 1:06:51 - transparent & currentColor
+    10. 1:17:47 - Propiedad opacity
+
+    11. 1:23:19 - Unidades de Medida en CSS
+    12. 1:33:41 - Pixeles
+    13. 1:43:14 - EMs
+    14. 1:57:50 - REMs
+    15. 2:09:53 - EXs
+    16. 2:15:58 - CHs
+    17. 2:25:51 - Porcentajes
+    18. 2:42:44 - Unidades del Viewport
+    19. 3:03:40 - ¿Cuándo usar cada unidad de medida?
+
+    20. 3:12:10 - Variables y Funciones en CSS
+    21. 3:15:11 - Custom Properties y Función var()
+    22. 3:39:07 - Función url()
+    23. 3:41:01 - Función calc()
+    24. 3:49:56 - Función min() & max()
+    25. 3:55:23 - Función clamp()
+
+    26. 4:00:05 - Estilos de Fuentes y Textos
+    27. 4:03:47 - Estilos de Fuentes
+    28. 4:16:51 - Fuentes externas (@font-face & font-display)
+    29. 4:32:51 - Google Fonts
+    30. 4:50:35 - Estilos de Texto
+    31. 5:12:35 - Iconos Tipográficos
+
+    32. 5:32:59 - Propiedad border-radius
+    33. 5:53:05 - Propiedad outline
+
+    34. 6:03:28 - Estilos del Fondo
+    35. 6:09:00 - Propiedad background-color
+    36. 6:09:58 - Propiedad background-image
+    37. 6:12:25 - Propiedad background-size
+    38. 6:20:21 - Propiedad background-repeat
+    39. 6:22:49 - Propiedad background-position
+    40. 6:28:20 - Propiedad background-clip
+    41. 6:33:02 - Propiedad background-origin
+    42. 6:36:46 - Diferencias entre clip y origin
+    43. 6:44:52 - Propiedad background-attachment
+    44. 6:48:40 - Propiedad background
+    45. 6:51:11 - Fondos Múltiples
+
+    46. 7:05:37 - Estilos de Imágenes
+
+    47. 7:28:29 - Estilos de Listas
+    48. 7:49:15 - Texto en Columnas
+
+    49. 8:00:00 - Estilos de Tablas
+
+    50. 8:13:37 - Estilos de Formularios
+    51. 8:23:46 - Formulario de Contacto con CSS
+
+    52. 8:54:51 - Despedida.
+
+}
+
+####################
+Efectos Visuales y Movimientos en CSS
+{
+    📝 ÍNDICE:
+    1. 0:00:00 - Bienvenida
+
+    2. 0:09:12 - Estilos iniciales para nuestro documento
+    3. 0:12:11 - Sombra a las cajas (box-shadow)
+    4. 0:19:40 - Sombra a los textos (text-shadow)
+    5. 0:21:58 - Sombras múltiples
+    6. 0:26:16 - Filtro de sombras (drop-shadow)
+
+    7. 0:36:23 - Degradados lineales (linear-gradient)
+    8. 0:50:03 - Degradados radiales (radial-gradient)
+    9. 0:59:42 - Degradados cónicos (conic-gradient)
+    10. 1:07:19 - Patrones con degradados
+    11. 1:14:28 - Gráficas con degradados
+
+    12. 1:21:40 - Filtros (filter) 
+    13. 1:36:40 - Filtros múltiples
+    14. 1:41:33 - Filtros a fondos (backdrop-filter)
+    15. 1:59:26 - Modo Dark/Light con filtros
+
+    16. 2:07:36 - Modos de Mezcla (mix-blend-mode)
+    17. 2:17:32 - Modos de Mezcla a fondos (background-blend-mode)
+
+    18. 2:25:34 - Máscaras (clip-path)
+    19. 2:43:00 - Formas (shape-outside)
+
+    20. 3:01:33 - Sitio One Page Scroll (scroll-margin & scroll-behaivor)
+    21. 3:29:05 - Ajuste del Scroll Efecto Slides Verticales (scroll-snap-type & scroll-snap-align)
+    22. 4:00:18 - Ajuste del Scroll Efecto Carrusel Horizontal (scroll-snap-type & scroll-snap-align)
+
+    23. 4:22:37 - Texto con Degradado
+
+    24. 4:32:23 - Movimiento en CSS
+    25. 4:38:12 - Transiciones
+    26. 4:51:49 - Propiedades Animables
+    27. 4:54:22 - Transiciones Múltiples
+    28. 5:04:03 - Porqué no usar la palabra all en tus transiciones
+    29. 5:08:30 - El Algoritmo de CSS y su efecto sobre las transiciones
+
+    30. 5:18:04 - Transformaciones en 2D
+    31. 5:41:38 - Transformación Matrix 2D
+    32. 5:44:40 - Transformaciones 2D Múltiples
+    33. 5:47:19 - Activando la Perspectiva 3D
+    34. 5:56:43 - Transformaciones en 3D
+    35. 6:08:35 - Transformación Matrix 3D
+    36. 6:10:24 - Transformaciones 3D Múltiples
+    37. 6:13:11 - Origen de Transformación (transform-origin)
+
+    38. 6:24:26 - Flip Cards con transiciones y transformaciones
+
+    39. 6:43:22 - Animaciones
+    40. 7:03:38 - Propiedades de Animación en CSS
+    41. 7:20:58 - Linea de tiempo y fotogramas claves en CSS
+    42. 7:34:23 - Animaciones Múltiples
+
+    43. 7:40:42 - Efecto fadein & fadeout
+    44. 7:47:38 - Efecto shake
+    45. 7:54:06 - Efecto pulse
+    46. 7:58:18 - ❤️ Eres el CSS de mi HTML ❤️
+    47. 8:11:47 - Spinner / Loader animado
+
+    48. 8:18:44 - Botones Animados (maquetación)
+    49. 8:27:25 - Botones Animados (micro interacciones)
+    50. 8:33:22 - Botones con Gradientes Animados
+
+    51. 8:37:24 - Menú de Pestañas Tabs (maquetación)
+    52. 8:52:21 - Menú de Pestañas Tabs (animación)
+
+    53. 8:56:37 - Menú Off Canvas (marcado HTML)
+    54. 9:02:15 - Botón de Hamburguesa Animado
+    55. 9:26:13 - Menú Off Canvas (maquetación y animación)
+
+    56. 9:44:57 - Ventana Modal
+
+    57. 10:02:13 - Intro Películas Star Wars
+    58. 10:16:20 - Despedida
+
+    War! The Republic is crumbling under attacks by the ruthless Sith Lord, Count Dooku.
+    There are heroes on both sides. Evil is everywhere.
+
+    In a stunning move, the fiendish droid leader, General Grievous has swept into the Republic capital and kidnapped Chancellor Palpatine, leader of the Galactic Senate.
+
+    As the Separatist Droid Army attempts to flee the besieged capital with their valuable hostage, two Jedi Knights lead a desperate mission to rescue the captive Chancellor...
+
+}
+
+##########################
+Responsive Design y Arquitectura CSS
+
+{
+    📝 ÍNDICE:
+    1. 0:00:00 - Bienvenida
+    2. 0:05:51 - Descarga de archivos para trabajar
+
+    3. 0:11:59 - Introducción al Responsive Design
+    4. 0:40:33 - Contenedore Flexibles
+    5. 0:48:59 - Propiedades max-width, min-width, max-height y min-height
+    6. 0:55:51 - Tamaños fijos VS Tamaños máximos y mínimos
+
+    7. 1:08:10 - Multimedia Flexible
+    8. 1:12:47 - Atributo srcset y sizes
+    9. 1:26:45 - Etiqueta picture
+    10. 1:37:05 - Videos responsivos
+    11. 1:49:39 - Iframes responsivos
+
+    12. 1:59:21 - Media Queries versión 2.1
+    13. 2:11:37 - Media Queries versión 3
+    14. 2:34:24 - Breakpoints
+    15. 2:49:13 - Viewport
+    
+    16. 2:58:39 - Grid Responsiva Artesanal con Flexbox
+
+    17. 3:28:01 - Feature Queries
+    18. 3:42:19 - Container Queries
+
+    19. 4:06:06 - SEO
+    20. 4:18:25 - Desktop First VS Mobile First
+    21. 4:26:39 - Adaptive Design
+    22. 4:36:12 - Responsive Design + Server Side Components (RESS)
+    23. 4:47:17 - Responsible Responsive Design
+    24. 4:53:57 - Fluid Design
+    25. 5:06:00 - Grid Fluida
+    26. 5:12:30 - Textos Fluidos
+    27. 5:27:10 - Contenedores Fluidos
+
+    28. 5:35:01 - Introducción a la Arquitectura CSS
+    
+    29. 6:06:23 - Metodologías CSS
+    30. 6:12:47 - BEM
+    31. 6:19:19 - SMACSS
+    32. 6:24:13 - OOCSS
+    33. 6:25:54 - ITCSS
+    34. 6:29:20 - AMCSS
+    35. 6:32:08 - SUITCSS
+    36. 6:36:41 - Atomic Design
+    37. 6:44:36 - Conclusiones Metodologías CSS
+
+    38. 6:46:44 - Frameworks CSS
+    39. 6:48:32 - 960 Grid System
+    40. 6:50:19 - Skeleton 
+    41. 6:51:18 - Pure CSS
+    42. 6:52:56 - Ink
+    43. 6:56:39 - MUI
+    44. 7:00:54 - Semantic UI
+    45. 7:04:34 - Bulma
+    46. 7:09:18 - UI kit
+    47. 7:13:02 - Materialize
+    48. 7:18:41 - Foundation
+    49. 7:25:55 - Tailwind
+    50. 7:39:20 - Bootstrap
+    51. 7:57:14 - Conclusiones Frameworks CSS
+    52. 8:02:18 - ¿Cómo elegir un Framework CSS?
+
+    53. 8:10:40 - Pre procesadores CSS
+    54. 8:24:58 - Stylus
+    55. 8:27:27 - Less
+    56. 8:29:26 - Sass 
+
+    57. 8:40:35 - Post procesadores CSS
+    58. 8:43:00 - PostCSS
+    59. 8:45:09 - CSSNext
+    60. 8:50:58 - CSS in JS
+    61. 8:54:00 - Conclusiones Procesadores CSS
+
+    62. 8:56:01 - Herramientas de Automatización 
+    63. 9:10:49 - Guías de Estilos 
+    64. 9:28:10 - ¿Qué herramientas uso?
+    65. 9:37:23 - Arquitectura Minimalista
+
+    66. 9:46:23 - Despedida, ¿Que sigue después de este curso?
+}

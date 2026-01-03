@@ -1,0 +1,74 @@
+
+/* Custom Properties (Variables CSS) */
+:root {
+    color: darkgreen;
+    --default-bg-color: skyblue;
+}
+
+html {
+    color: red;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.custom-props-1 {
+    --primary-color: gray;
+    --font-size: 32px;
+    background-color: var(--primary-color);
+}
+
+
+.custom-props-2 {
+    background-color: var(--default-bg-color);
+    border: thin solid var(--border-color);
+    padding: 1rem;
+}
+
+.custom-props-3 {
+    font-size: var(--font-size);
+    border: thin solid var(--border-color);
+}
+
+.title-props {
+    --primary-color: navy;
+    color: var(--primary-color, orange);
+    background-color: var(--default-bg-color);
+}
+
+/* Funciones en CSS */
+
+.ch-10 {
+    --padding-size: 3ch;
+    --num-ch: 10ch;
+    background-color: var(--default-bg-color);
+    font-size: 2rem;
+    padding: var(--padding-size);
+    /* width: 10ch; */
+    width: calc( var(--num-ch) + var(--padding-size) * 2 );
+}
+
+/* Función min() & max() */
+
+.min-max {
+    background-color: var(--default-bg-color);
+    width: min(250px, 20vw);
+    height: max(150px, 25vh);
+}
+
+/* Función clamp() */
+
+h1 {
+    font-size: clamp(2rem, 1rem + 3vw, 3rem );
+}

@@ -1,0 +1,20 @@
+
+
+
+.table {
+    font-size: 3rem;
+    /* Controla si la celdas se mantienen juntas */
+    border-collapse: collapse;
+    border-collapse: separate; /* default */
+    empty-cells: show; /* default */
+    empty-cells: hide;
+}
+
+table, 
+td,
+th {
+    border: medium solid black;
+    border-spacing: 0;
+    border-spacing: 1rem;
+
+}

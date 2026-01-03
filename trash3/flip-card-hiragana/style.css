@@ -1,0 +1,148 @@
+
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background: #38ad8c;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    background-image: linear-gradient( to top, #77f8d1 0 1%, #55c8a7  90%);
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+    filter: drop-shadow(0.2rem 0.2rem 1px black);
+    /* width: 20vh; */
+    text-align: center;
+    /* height: inherit; */
+}
+
+section {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+.flip-card {
+    margin: 0 auto;
+
+    width: 50vw;
+    height: 350px;
+
+    position: relative;
+    perspective: 10rem;
+
+    transform-style: preserve-3d;
+
+    transition: transform 500ms;
+}
+
+/* .flip-card:focus {
+    transform: rotateY(180deg);
+} */
+
+.flip-face {
+    width: 100%;
+    height: 100%;
+    font-size: 10vh;
+    font-weight: bold;
+    color: #131111;
+    text-shadow: 0rem 0rem .5rem #ffffff;
+
+    border-radius: 1rem;
+    border: .5rem solid #f0f0f0;
+
+    position: absolute;
+    backface-visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 100ms;
+    
+    box-shadow: .5rem .5rem .5rem .05rem black;
+}
+
+.flip-front {
+    background-image: linear-gradient(53deg, #7d08e4 10% 30%, #c132c1 50% ,#5555bb);
+    transform: rotateY(0deg);
+}
+
+.flip-180 {
+    transform: rotateY(180deg);
+}
+
+.flip-0 {
+    transform: rotateY(0deg);
+}
+
+.flip-back {
+    background-color: #f0f0f0;
+    font-size: 7vh;
+    transform: rotateY(180deg);
+}
+
+@media (min-width: 850px) {
+
+    .flip-card {
+        width: 25vw;
+        height: 400px;
+
+    }
+    
+    .flip-face {
+        font-size: 12vw;
+        font-weight: bold;
+    }
+    
+    section {
+        width: 70vw;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
+
+@media (min-width: 1150px) {
+    .flip-card {
+        width: 15vw;
+        height: 400px;
+    
+    }
+
+    .flip-face {
+        font-size: 7vw;
+        font-weight: bold;
+    }
+}

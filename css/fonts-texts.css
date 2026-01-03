@@ -1,0 +1,173 @@
+
+
+/** Estilos de la Fuente 
+
+  font-family:;
+  
+  font-size:;
+
+  font-weight:;
+  
+  font-style:;
+  
+  font-variant:;
+  
+  line-height:;
+
+  */
+
+.font {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: sans-serif; */
+    /* font-family: monospace; */
+    font-size: 32px;
+    /* font-weight: bold; */
+    font-style: oblique;
+    font-variant:small-caps;
+    line-height: 2;
+    font: italic small-caps bold 24px / 1.5 monospace ;
+}
+
+/*
+* Fuentes externas (@font-face & font-display)
+
+Formato woff o woff2 - Web Open Font Format
+
+font-display: Nos permite como queremos que carge el texto miestras carga las fuentes (tipografia) personalizadas.
+
+-   auto: Permite que el navegador utilice el método predeterminado que suele ser block.
+
+-   block: Oculta brevemente el texto hasta que la fuente haya sido cargada por completo.
+
+-   swap: Indica al navegador que utilice la fuente alternativa para mostrar el texto hasta 
+    que la fuente personalizada se haya cargado por completo.
+
+-   fallback: Es una mezcla de auto y swap.
+
+-   optional: Ocultará el texto, luego lo cargará con la fuente alternativa y finalmente aplicará la fuente personalizada.
+
+
+*/
+
+@font-face {
+    font-family: "Chalet";
+    src: url("../assets/Chalet.woff") format("woff");
+    font-display: swap;
+
+    /* src: url("../assets/Chalet.woff") format("woff"), 
+         url("../assets/Chalet.woff2") format("woff2"); */
+}
+
+.chalet {
+    font-family: "Chalet", sans-serif;
+    font-size: 2rem;
+}
+
+@font-face {
+    font-family: "Pecita";
+    src: url("../assets/Pecita.woff") format("woff");
+    font-display: swap;
+}
+
+.pecita {
+    font-family: "Pecita", cursive;
+    font-size: 2rem;
+}
+
+.raleway {
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+}
+
+/** Estilos de Texto
+
+-   text-align: left|right|center|justify ;
+-   text-decoration: none|underline|overline ;
+-   text-indent (sangria): 1rem 2rem ;
+-   text-overflow: clip|ellipsis ;
+        overflow: hidden;
+        white-space: nowrap;
+-   text-transform: none|capitalize|uppcase|lowercase ;
+
+-   letter-spacing: 1rem 2rem;
+-   white-space: normal|nowrap|pre||pre-wrap|pre-line ;
+
+-   word-break: normal|break-all ;
+-   word-spacing: normal 5px 2rem;
+-   writing-mode: horizontal-tb|vertical-lr|vertical-rl ;
+
+*/
+
+.text {
+    font-size: 2rem;
+    /* text- */
+    text-align: center;
+    text-align: left;
+    text-decoration: overline;
+    text-decoration: none;
+    text-indent: 3rem;
+    text-transform: capitalize;
+    text-transform: lowercase;
+    text-transform: uppercase;
+    text-transform: none;
+    letter-spacing: .5rem;
+    word-break: break-all;
+    writing-mode: horizontal-tb;
+    writing-mode: vertical-lr;
+    writing-mode: vertical-rl;
+    /* text-shadow: ; */
+}
+
+.text a {
+    text-decoration: none;
+}
+
+.text-overflow {
+    background-color: blanchedalmond;
+    border: thin solid black;
+    font-size: 2rem;
+    padding: 1rem;
+    width: 50%;
+    /* text-overflow */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.white-space {
+    white-space: pre;
+}
+
+.word-spacing {
+    font-size: 2rem;
+    word-spacing: 3rem;
+}
+
+/** Tipográficas de Íconos Vectoriales
+
+*/
+
+.material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: "liga";
+}
